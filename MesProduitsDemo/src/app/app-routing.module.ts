@@ -10,7 +10,7 @@ import { ProduitGuard } from './produit.guard';
 const routes: Routes = [
   {path : "produits", component : ProduitsComponent},
   {path: "add-produit", component : AddProduitComponent, canActivate:[ProduitGuard]},
-  {path: "updateProduit/:id", component: UpdateProduitComponent},
+  {path: "updateProduit/:id", component: UpdateProduitComponent, canActivate:[ProduitGuard]},
   {path: "login", component: LoginComponent},
   {path: 'forbidden', component: ForbiddenComponent},
   { path: "", redirectTo: "produits", pathMatch: "full" }
